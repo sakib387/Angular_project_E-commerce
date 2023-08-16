@@ -1,16 +1,27 @@
 
 <nav>
-    <h1>E-commerce</h1>
-    <div class="nav-search">
+    <h1><a routerLink="/" style="text-decoration: none;">E-commerce</a></h1>
+  
+    <div class="nav-search" *ngIf="manuType=='default'">
+
         <input type="text" placeholder="search for product">
          <button>Search</button>
     </div>
-   <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/seller-auth">Seller</a></li>
-      <li><a href="#">Login</a></li>
-      <li><a href="#">Cart(0)</a></li>
-    </ul>
+    <div [ngSwitch]="manuType">
+        <ul *ngSwitchCase="'default'">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/seller-auth">Seller</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Cart(0)</a></li>
+          </ul>
+          <ul *ngSwitchCase="'seller'">
+            <li><a routerLink="/">Product List</a></li>
+            <li><a routerLink="/seller-auth">Add product</a></li>
+            <li><a href="#">LogOut</a></li>
+            <li><a href="#">Seller Name</a></li>
+          </ul>
+    </div>
+  
 
 
 </nav>
