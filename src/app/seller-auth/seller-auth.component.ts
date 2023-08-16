@@ -9,6 +9,8 @@ import { signUp } from '../data-model';
   styleUrls: ['./seller-auth.component.css']
 })
 export class SellerAuthComponent {
+  isLogin: boolean = false;
+  error:string='';
   constructor(private seller:SellerService,
    private router:Router,
     ){}
@@ -17,5 +19,15 @@ export class SellerAuthComponent {
     }
   signUp(data:signUp){
      this.seller.userSignUp(data) 
+  }
+  sellerlogin(data:signUp){
+  this.error='';
+   this.seller.userLogin(data);
+   if(this.seller.isLogin==false){
+    this.error="Email or Password is incorrect"
+   }
+ }
+  toggle() {
+    this.isLogin = !this.isLogin; // Toggle the value of isLogin
   }
 }
