@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { product } from '../data-model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -10,8 +10,10 @@ import { ProductService } from '../services/product.service';
 })
 export class SellerUpdateProductComponent {
   productData!:product;
+  message!:string;
   constructor(private route:ActivatedRoute,
-    private product:ProductService
+    private product:ProductService,
+    private router:Router
     
     ){}
 
@@ -22,6 +24,17 @@ export class SellerUpdateProductComponent {
     })
   }
   submitProduct(data:product){
-
+    if(this.productData){
+      data.id=this.productData.id;
+    }
+     this.product.updateProducr(data).subscribe((res)=>{
+       if(res){
+        this.message="product updated successfully"
+       }
+       setTimeout(() => {
+        this.message="";
+        this.router.navigate(['seller-home'])
+       }, 2000);
+     })
   }
 }
