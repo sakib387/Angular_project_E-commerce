@@ -2,7 +2,7 @@
     <h1 style="text-align: center">Add New Product</h1>
     <p style="text-align: center;color: green;">{{message}}</p>
     <form #addProduct="ngForm" (ngSubmit)="submitProduct(addProduct.value)" class="common-form">
-        <input type="text" class="form-input" placeholder="Enter Product Name" name="naem" ngModel />
+        <input type="text" class="form-input" placeholder="Enter Product Name" name="name" ngModel />
         <input type="text" class="form-input" placeholder="Enter Product Price" name="price" ngModel />
         <input type="text" class="form-input" placeholder="Enter Product color" name="color" ngModel />
         <input type="text" class="form-input" placeholder="Enter Product category" name="category" ngModel />
