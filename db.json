@@ -25,24 +25,5 @@
       "id": 4
     }
   ],
-  "products": [
-    {
-      "naem": "Mobile",
-      "price": "1000",
-      "color": "whirte",
-      "category": "none",
-      "description": "nice phone",
-      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Fphone&psig=AOvVaw0-1ZmNX_W_mbXP_2q2ZaWL&ust=1692461641583000&source=images&cd=vfe&opi=89978449&ved=0CA4QjRxqFwoTCJiloInN5oADFQAAAAAdAAAAABAE",
-      "id": 1
-    },
-    {
-      "naem": "Mobile",
-      "price": "1000",
-      "color": "red",
-      "category": "none",
-      "description": "nice phone",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkMRlFazjcGB1gS7JvrwXWf2Qkh_2MZ2-Hw&usqp=CAU",
-      "id": 2
-    }
-  ]
+  "products": []
 }
