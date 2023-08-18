@@ -25,5 +25,15 @@
       "id": 4
     }
   ],
-  "products": []
+  "products": [
+    {
+      "naem": "Mobile",
+      "price": "1000",
+      "color": "whirte",
+      "category": "noned",
+      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkMRlFazjcGB1gS7JvrwXWf2Qkh_2MZ2-Hw&usqp=CAU",
+      "id": 1
+    }
+  ]
 }

@@ -21,7 +21,10 @@
          <td>{{intem.color}}</td>
          <td>{{intem.category}}</td>
          <td>{{intem.description}}</td>
-         <td><button (click)="deleteProduct(intem.id)">Delete</button></td>
+         <td>
+            
+            <fa-icon (click)="deleteProduct(intem.id)" [icon]="delete"></fa-icon>
+            <a style="margin-left: 10px;" routerLink="/seller-update-product/{{intem.id}}"> <fa-icon  [icon]="edit"></fa-icon></a>
         </tr>
     </tbody>
 </table>
