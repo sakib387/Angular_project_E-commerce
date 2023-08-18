@@ -27,6 +27,9 @@ export class SellerAuthComponent {
     this.error="Email or Password is incorrect"
    }
  }
+ LogIn(data:signUp){
+  this.seller.userLogin(data) 
+}
   toggle() {
     this.isLogin = !this.isLogin; // Toggle the value of isLogin
   }
