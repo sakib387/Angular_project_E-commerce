@@ -1,6 +1,6 @@
 nav{
     display: flex;
-    
+    margin: 10px;
     justify-content: space-between;
 }
 nav h1{
@@ -33,7 +33,7 @@ nav .nav-search input{
     flex: 1;
     color:  #8e108a;
     border: 1px solid blueviolet;
-    height: 35px;
+    height: 39px;
     border-right: 0px;
 }
 nav .nav-search button{
