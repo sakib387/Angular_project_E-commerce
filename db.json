@@ -43,6 +43,24 @@
       "description": "",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkMRlFazjcGB1gS7JvrwXWf2Qkh_2MZ2-Hw&usqp=CAU",
       "id": 4
+    },
+    {
+      "name": "mollah",
+      "price": "1000",
+      "color": "whirte",
+      "category": "",
+      "description": "",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/toshiba/satellite-pro-c40-g-109/satellite-pro-c40-g-109-01-228x228.webp",
+      "id": 5
+    },
+    {
+      "name": "mollah",
+      "price": "699",
+      "color": "whirte",
+      "category": "",
+      "description": "",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-228x228.jpg",
+      "id": 6
     }
   ]
 }

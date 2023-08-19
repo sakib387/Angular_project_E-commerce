@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { product } from '../data-model';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  images = [700, 533, 807, 124].map((n) => `https://picsum.photos/id/${n}/900/500`);
+   popularProduct!:product[];
+   constructor(private product:ProductService){}
+  ngOnInit():void{
+    this.product.popularProduct().subscribe((data)=>{
+   this.popularProduct=data;
+    })
+  }
+
 }
