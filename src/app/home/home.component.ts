@@ -9,11 +9,15 @@ import { product } from '../data-model';
 })
 export class HomeComponent {
    popularProduct!:product[];
+   trendyProduct!:product[];
    constructor(private product:ProductService){}
   ngOnInit():void{
     this.product.popularProduct().subscribe((data)=>{
    this.popularProduct=data;
-    })
+    });
+    this.product.trendyProduct().subscribe((data)=>{
+      this.trendyProduct=data;
+       });
   }
 
 }

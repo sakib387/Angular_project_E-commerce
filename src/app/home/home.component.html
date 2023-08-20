@@ -13,103 +13,19 @@
 <div class="product-list-wraper">
     <h1>Trendy product</h1>
     <div class="row">
-    <div class="col-sm-3">
+     
+    <div class="col-sm-3" *ngFor="let item of trendyProduct">
         <div class="product-item">
-            <img src="https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-228x228.jpg">
+            <img src="{{item.image}}">
  
         <div class="product-details">
-         <h6 class="name-head">Apple Phone</h6>
+         <h6 class="name-head">{{item.name}}</h6>
         
         <div class="product-price">
-            <h6 class="name-price"> Phone price</h6>
+            <h6 class="name-price"> {{item.price}}</h6>
            </div>
            <div class="product-color">
-            <h6 class="name-color">BluePhone</h6>
-           </div>
-        </div>
-           <div class="product-footer">
-            <a href="">view details</a>
-            <a href="">Add card</a>
-            </div>
-    </div>
-   
-    </div>
-
-    <div class="col-sm-3">
-        <div class="product-item">
-            <img src="https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-228x228.jpg">
- 
-        <div class="product-details">
-         <h6 class="name-head">Apple Phone</h6>
-        
-        <div class="product-price">
-            <h6 class="name-price"> Phone price</h6>
-           </div>
-           <div class="product-color">
-            <h6 class="name-color">BluePhone</h6>
-           </div>
-        </div>
-           <div class="product-footer">
-            <a href="">view details</a>
-            <a href="">Add card</a>
-            </div>
-    </div>
-   
-    </div>
-    <div class="col-sm-3">
-        <div class="product-item">
-            <img src="https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-228x228.jpg">
- 
-        <div class="product-details">
-         <h6 class="name-head">Apple Phone</h6>
-        
-        <div class="product-price">
-            <h6 class="name-price"> Phone price</h6>
-           </div>
-           <div class="product-color">
-            <h6 class="name-color">BluePhone</h6>
-           </div>
-        </div>
-           <div class="product-footer">
-            <a href="">view details</a>
-            <a href="">Add card</a>
-            </div>
-    </div>
-   
-    </div>
-    <div class="col-sm-3">
-        <div class="product-item">
-            <img src="https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-228x228.jpg">
- 
-        <div class="product-details">
-         <h6 class="name-head">Apple Phone</h6>
-        
-        <div class="product-price">
-            <h6 class="name-price"> Phone price</h6>
-           </div>
-           <div class="product-color">
-            <h6 class="name-color">BluePhone</h6>
-           </div>
-        </div>
-           <div class="product-footer">
-            <a href="">view details</a>
-            <a href="">Add card</a>
-            </div>
-    </div>
-   
-    </div>
-    <div class="col-sm-3">
-        <div class="product-item">
-            <img src="https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-228x228.jpg">
- 
-        <div class="product-details">
-         <h6 class="name-head">Apple Phone</h6>
-        
-        <div class="product-price">
-            <h6 class="name-price"> Phone price</h6>
-           </div>
-           <div class="product-color">
-            <h6 class="name-color">BluePhone</h6>
+            <h6 class="name-color">{{item.color}}</h6>
            </div>
         </div>
            <div class="product-footer">
