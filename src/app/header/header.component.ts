@@ -53,4 +53,7 @@ export class HeaderComponent {
       this.route.navigate(['search', valu]);
     });
     }
+    dounevent(id:number){
+      this.route.navigate(['details',id])
+    }
 }

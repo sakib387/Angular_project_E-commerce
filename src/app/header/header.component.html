@@ -7,7 +7,7 @@
         <input type="text" #searchInput placeholder="search for product" (keyup)="searchProduct($event)" (blur)="removeSearch()">
          <button (click)="searchAproduct(searchInput.value)">Search</button>
          <ul class="src-result" *ngIf="srcProduct">
-          <li *ngFor="let item of srcProduct"><a>{{item.name}}</a></li>
+          <li *ngFor="let item of srcProduct"> <a (mousedown)="dounevent(item.id)">{{item.name}}</a></li>
          </ul>
     </div>
     <div [ngSwitch]="manuType">

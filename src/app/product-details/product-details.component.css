@@ -1,0 +1,14 @@
+.product-image{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.quantity{
+
+    margin-top: 10px;
+}
+.quantity input{
+    text-align: center;
+    width: 30px;
+}
