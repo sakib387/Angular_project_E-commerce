@@ -45,3 +45,16 @@ nav .nav-search button{
     border-left: 0px;
     
 }
+.src-result{
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    border-radius: 1px solid #ddd;
+}
+.src-result li{
+    padding: 5px;border-radius: 1px solid #fff;
+    cursor:pointer;
+    color:blueviolet;
+}
