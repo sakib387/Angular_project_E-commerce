@@ -1,10 +1,21 @@
-<div class="user-auth">
- <h1 style="text-align: center; margin: 20px;">User Sin-up</h1>
+<div class="user-auth"  *ngIf="!toogle">
+ <h1 style="text-align: center; margin: 20px;">User Sign-up</h1>
  <form #userSignup="ngForm" class="common-form" (ngSubmit)="signUp(userSignup.value)">
    <input type="text" class="form-input" placeholder="Enter user name" name="name" ngModel/>
    <input type="text" class="form-input" placeholder="Enter user email" name="eamil" ngModel/>
    <input type="password" class="form-input" placeholder="Enter password" name="password" ngModel/>
    <button style="width: 290px;text-align: center;margin-left: 9px;">signUp</button>
-
+  <a   (click)="toggle()">have an account</a>
 </form>
 </div>
+
+
+<div class="user-auth" *ngIf="toogle">
+  <h1 style="text-align: center; margin: 20px;">User Sign-In</h1>
+  <form #userLogin="ngForm" class="common-form" (ngSubmit)="login(userLogin.value)">
+    <input type="text" class="form-input" placeholder="Enter user email" name="eamil" ngModel/>
+    <input type="password" class="form-input" placeholder="Enter password" name="password" ngModel/>
+    <button style="width: 290px;text-align: center;margin-left: 9px;">LogIn</button>
+    <a (click)="toggle()">Don't have any account</a>
+ </form>
+ </div>

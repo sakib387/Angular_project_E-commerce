@@ -58,3 +58,6 @@ nav .nav-search button{
     cursor:pointer;
     color:blueviolet;
 }
+.nav ul a{
+    cursor: pointer;
+}

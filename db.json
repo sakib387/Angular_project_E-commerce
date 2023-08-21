@@ -23,6 +23,12 @@
       "email": "develtest088@gmail.com",
       "password": "Eino@123",
       "id": 4
+    },
+    {
+      "name": "SAKIB MOLLAH",
+      "email": "develtest088@gmail.com",
+      "password": "Eino@123",
+      "id": 5
     }
   ],
   "products": [
@@ -61,6 +67,20 @@
       "description": "",
       "image": "https://www.startech.com.bd/image/cache/catalog/laptop/lenovo/ideapad-slim-3i/ideapad-slim-3i-0010-228x228.jpg",
       "id": 6
+    }
+  ],
+  "users": [
+    {
+      "name": "SAKIB MOLLAH",
+      "eamil": "develtest088@gmail.com",
+      "password": "Eino@123",
+      "id": 1
+    },
+    {
+      "name": "sakib",
+      "eamil": "ju@gmail",
+      "password": "1234",
+      "id": 2
     }
   ]
 }

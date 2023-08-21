@@ -10,21 +10,25 @@ import { product } from '../data-model';
 export class HeaderComponent {
   manuType:string='default';
   sellerName:string='';
+  userName:string='';
   srcProduct!:product[];
    constructor(private route:Router,private product:ProductService){}
    ngOnInit(){
     this.route.events.subscribe((val:any)=>{
       if(val.url){
         if(localStorage.getItem('seller')&&val.url.includes('seller')){
-          console.log(val.url)
+        let sellerStore=localStorage.getItem('seller');
+        let sellerData=sellerStore && JSON.parse(sellerStore)[0];
+        this.sellerName=sellerData.name;
         this.manuType='seller';
-        if(localStorage.getItem('seller')){
-          let sellerStorage=localStorage.getItem('seller');
-          let sellerData=sellerStorage && JSON.parse(sellerStorage)[0];
-          this.sellerName=sellerData.name;
         }
+        else if(localStorage.getItem('user')){
+       let userSore=localStorage.getItem('user');
+       let userData= userSore && JSON.parse(userSore);
+       this.userName=userData.name;
+       this.manuType='user';
+
         }
-      
       else{
         this.manuType='default';
       }}
@@ -56,4 +60,9 @@ export class HeaderComponent {
     dounevent(id:number){
       this.route.navigate(['details',id])
     }
+     userlogout() {
+      localStorage.removeItem('user');
+    this.route.navigate(['user-auth']);
+     }
+
 }

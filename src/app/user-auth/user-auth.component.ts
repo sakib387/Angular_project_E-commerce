@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { signUp } from '../data-model';
+import { signIn, signUp } from '../data-model';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-user-auth',
@@ -7,8 +8,20 @@ import { signUp } from '../data-model';
   styleUrls: ['./user-auth.component.css']
 })
 export class UserAuthComponent {
+   constructor(private user:UserService){}
+   toogle:boolean=false;
+ 
+   ngOnInit(){
+    this.user.userReload();
+   }
+   signUp(data:signUp){
+  this.user.userSignup(data);
+  
+   }
+   login(kdata:signIn){
 
-  signUp(data:signUp){
-   console.log(data)
+   }
+   toggle(){
+     this.toogle=!this.toogle;
    }
 }
