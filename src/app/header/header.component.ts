@@ -12,6 +12,7 @@ export class HeaderComponent {
   sellerName:string='';
   userName:string='';
   srcProduct!:product[];
+  cardItem:number=0;
    constructor(private route:Router,private product:ProductService){}
    ngOnInit(){
     this.route.events.subscribe((val:any)=>{
@@ -32,6 +33,13 @@ export class HeaderComponent {
       else{
         this.manuType='default';
       }}
+    })
+    let cartData=localStorage.getItem('localCart');
+    if(cartData){
+      this.cardItem=JSON.parse(cartData).length
+    }
+    this.product.CartData.subscribe((res)=>{
+      this.cardItem=res.length;
     })
     
    }

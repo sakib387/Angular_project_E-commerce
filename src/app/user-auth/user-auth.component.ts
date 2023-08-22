@@ -10,7 +10,7 @@ import { UserService } from '../services/user.service';
 export class UserAuthComponent {
    constructor(private user:UserService){}
    toogle:boolean=false;
- 
+   message:string='';
    ngOnInit(){
     this.user.userReload();
    }
@@ -18,8 +18,17 @@ export class UserAuthComponent {
   this.user.userSignup(data);
   
    }
-   login(kdata:signIn){
-
+   login(data:signIn){
+    this.message='';
+     this.user.userLogin(data)
+     this.user.isloginflase.subscribe((res)=>{
+      if(res==false){
+      this.message='';
+      }
+      else{
+        this.message='login fail'
+      }
+     })
    }
    toggle(){
      this.toogle=!this.toogle;

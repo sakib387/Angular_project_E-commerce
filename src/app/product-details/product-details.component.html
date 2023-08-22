@@ -10,12 +10,13 @@
             Color:<h5>{{productData.color}}</h5>
         </div>
         <h6>Catagory: {{productData.category}}</h6>
-        <button>Add to Cart</button>
+        <button (click)="addCatd(productData)" *ngIf="!removecrt">Add to Cart</button>
+        <button (click)="removeCatd(productData.id)" *ngIf="removecrt">Remove to Cart</button>
         <button>Buy Now</button>
         <div class="quantity">
             <button (click)="qunatity('min')">-</button>
             <input type="text" value="{{qun}}">
-            <button (lick)="qunatity('sum')">+</button>
+            <button (click)="qunatity('sum')">+</button>
         </div>
     </div>
   </div>

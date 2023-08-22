@@ -12,6 +12,7 @@
 
 <div class="user-auth" *ngIf="toogle">
   <h1 style="text-align: center; margin: 20px;">User Sign-In</h1>
+  <h1 style="color: red;text-align: center;">{{message}}</h1>
   <form #userLogin="ngForm" class="common-form" (ngSubmit)="login(userLogin.value)">
     <input type="text" class="form-input" placeholder="Enter user email" name="eamil" ngModel/>
     <input type="password" class="form-input" placeholder="Enter password" name="password" ngModel/>
