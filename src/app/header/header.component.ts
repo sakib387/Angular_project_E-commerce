@@ -43,9 +43,11 @@ export class HeaderComponent {
     })
     
    }
+
    LogOut(){
     localStorage.removeItem('seller');
     this.route.navigate(['/']);
+    this.product.CartData.emit([]);
    }
    
    searchProduct(qry:KeyboardEvent){

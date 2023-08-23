@@ -82,5 +82,31 @@
       "password": "1234",
       "id": 2
     }
+  ],
+  "cart": [
+    {
+      "name": "Mobile",
+      "price": "1000",
+      "color": "whirte",
+      "category": "none",
+      "description": "xfdfaf",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkMRlFazjcGB1gS7JvrwXWf2Qkh_2MZ2-Hw&usqp=CAU",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 2,
+      "id": 1
+    },
+    {
+      "name": "",
+      "price": "",
+      "color": "",
+      "category": "",
+      "description": "",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkMRlFazjcGB1gS7JvrwXWf2Qkh_2MZ2-Hw&usqp=CAU",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 4,
+      "id": 32
+    }
   ]
 }

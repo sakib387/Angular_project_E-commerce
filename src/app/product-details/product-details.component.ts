@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 import { ProductService } from '../services/product.service';
-import { product } from '../data-model';
+import { cart, product } from '../data-model';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
@@ -31,6 +31,18 @@ export class ProductDetailsComponent {
           else false;
         }
      })
+     let user=localStorage.getItem('user');
+     let userId=user && JSON.parse(user).id;
+     if(userId){
+      this.product.getfromcart(userId)
+      this.product.CartData.subscribe((res)=>{
+      
+       let item= res.filter((item:product)=>item.productId?.toString()==id)
+      if(item.length>0){
+        this.removecrt=true;
+      }
+      })
+     }
    }
    qunatity(nam:string){
  
@@ -44,8 +56,30 @@ export class ProductDetailsComponent {
     }
    }
    addCatd(data:product){
-    this.product.localAddToCart(data)
-    this.removecrt=true;
+    if(this.productData){
+      this.productData.quantity=this.qun;
+      if(!localStorage.getItem('user')){
+
+        this.product.localAddToCart(data)
+        this.removecrt=true;
+      }
+      else{
+        let user=localStorage.getItem('user');
+        let userId=user && JSON.parse(user).id;
+        let cartDate:cart={
+          ...this.productData,
+          userId:userId,
+          productId:this.productData.id
+        }
+        delete cartDate.id;
+        this.product.addTocart(cartDate).subscribe((res)=>{
+         if(res){
+          this.product.getfromcart(userId)
+           this.removecrt=true;
+         }
+        })
+      }
+    }
    }
    removeCatd(id:number){
     this.product.removefromCart(id)
