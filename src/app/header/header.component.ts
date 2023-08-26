@@ -15,6 +15,7 @@ export class HeaderComponent {
   cardItem:number=0;
    constructor(private route:Router,private product:ProductService){}
    ngOnInit(){
+    
     this.route.events.subscribe((val:any)=>{
       if(val.url){
         if(localStorage.getItem('seller')&&val.url.includes('seller')){
@@ -28,6 +29,7 @@ export class HeaderComponent {
        let userData= userSore && JSON.parse(userSore);
        this.userName=userData.name;
        this.manuType='user';
+       this.product.getfromcart(userData.id)
 
         }
       else{

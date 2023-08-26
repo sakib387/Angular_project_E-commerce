@@ -10,6 +10,7 @@ import { cart, product } from '../data-model';
 export class ProductDetailsComponent {
    qun:number=1;
    price:number=0;
+   cartData!:product;
    removecrt:boolean=false;
   productData!:product;
    constructor(private activeRoute:ActivatedRoute,
@@ -27,6 +28,7 @@ export class ProductDetailsComponent {
           item=item.filter((itm:product)=>id==itm.id.toString())
           if(item.length){
             this.removecrt=true;
+            this.cartData=item[0];
           }
           else false;
         }
@@ -82,7 +84,21 @@ export class ProductDetailsComponent {
     }
    }
    removeCatd(id:number){
-    this.product.removefromCart(id)
     this.removecrt=false;
+    if(!localStorage.getItem('user')){
+
+      this.product.removefromCart(id)
+       
+    }
+    else{
+       
+      let user=localStorage.getItem('user');
+     // console.log(user)
+      let userId=user && JSON.parse(user).id;
+      console.log(id)
+      console.log(userId)
+       this.product.removecart(id,userId)
+     
+    }
    }
 }
