@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import { cart, pricesummary } from '../data-model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart-page',
@@ -16,7 +17,9 @@ export class CartPageComponent {
     delivery:0,
     total:0
   };
-  constructor(private product:ProductService){}
+  constructor(private product:ProductService,
+    private router:Router
+    ){}
 
   ngOnInit(){
     this.product.currentCart().subscribe((res)=>{
@@ -31,5 +34,8 @@ export class CartPageComponent {
       this.priceSummary.dincount=price/15
       this.priceSummary.total=price+(price/10)+100-(price/15)
     })
+  }
+  checkout(){
+    this.router.navigate(['checkout'])
   }
 }
