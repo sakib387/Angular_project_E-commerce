@@ -80,6 +80,13 @@ export class ProductService {
       }
     });
   }
+  currentCart(){
+    let userSore=localStorage.getItem('user');
+    let userData= userSore && JSON.parse(userSore);
+    let id=userData.id
+    return this.http.get<cart[]>(`http://localhost:3000/cart?userId=${id}`)
+      
+  }
   
   
 }

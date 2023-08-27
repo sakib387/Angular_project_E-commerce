@@ -2,18 +2,18 @@
 <h1>Cart Page</h1>
 <div class="row">
     <div class="col-sm-8 details">
-        <ul>
+        <ul *ngFor="let cart of cartData">
             <li>
-                <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+                <img src="{{cart.image}}">
             </li>
             <li>
-                <span>Product Name</span>
+                <span>{{cart.name}}</span>
              </li>
              <li>
-                <span>Price: 100</span>
+                <span>Price: {{cart.price}}</span>
              </li>
              <li>
-                <span>Quantity: 1</span>
+                <span>Quantity: {{cart.quantity}}</span>
              </li>
              <li>
                <button>Remove to Cart</button>
@@ -23,11 +23,11 @@
     <div class="col-sm-4 summary">
         <h3>Summary</h3>
         <ul>
-            <li><span>Amount</span><span>300</span></li>
-            <li><span>Tax</span><span>30</span></li>
-            <li><span>Delivery</span><span>30</span></li>
-            <li><span>Discount</span><span>30</span></li>
-            <li><span><h4>Total</h4></span><span><h4>300</h4></span></li>
+            <li><span>Amount</span><span>{{priceSummary.price}}</span></li>
+            <li><span>Tax</span><span>{{priceSummary.tax}}</span></li>
+            <li><span>Delivery</span><span>{{priceSummary.delivery}}</span></li>
+            <li><span>Discount</span><span>{{priceSummary.dincount}}</span></li>
+            <li><span><h4>Total</h4></span><span><h4>{{priceSummary.total}}</h4></span></li>
         </ul>
     </div>
 </div>

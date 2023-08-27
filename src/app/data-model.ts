@@ -35,3 +35,10 @@ export interface cart{
 
 
 }
+export interface pricesummary{
+    price:number,
+    dincount:number,
+    tax:number,
+    delivery:number,
+    total:number
+}

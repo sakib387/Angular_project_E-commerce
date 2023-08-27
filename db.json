@@ -95,6 +95,18 @@
       "userId": 1,
       "productId": 2,
       "id": 1
+    },
+    {
+      "name": "mollah",
+      "price": "1000",
+      "color": "whirte",
+      "category": "",
+      "description": "",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/toshiba/satellite-pro-c40-g-109/satellite-pro-c40-g-109-01-228x228.webp",
+      "quantity": 1,
+      "userId": 1,
+      "productId": 5,
+      "id": 2
     }
   ]
 }
