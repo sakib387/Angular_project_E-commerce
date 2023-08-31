@@ -108,5 +108,15 @@
       "productId": 5,
       "id": 2
     }
+  ],
+  "orders": [
+    {
+      "email": "develtest088@gmail.com",
+      "address": "none",
+      "contact": "none",
+      "totalPrice": 2100,
+      "userId": 1,
+      "id": 1
+    }
   ]
 }

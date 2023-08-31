@@ -31,8 +31,8 @@ export class CartPageComponent {
       this.priceSummary.price=price
       this.priceSummary.delivery=100
       this.priceSummary.tax=price/10
-      this.priceSummary.dincount=price/15
-      this.priceSummary.total=price+(price/10)+100-(price/15)
+      this.priceSummary.dincount=price/10
+      this.priceSummary.total=price+(price/10)+100-(price/10)
     })
   }
   checkout(){
