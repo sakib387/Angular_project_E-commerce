@@ -85,28 +85,16 @@
   ],
   "cart": [
     {
-      "name": "Mobile",
-      "price": "1000",
-      "color": "whirte",
-      "category": "none",
-      "description": "xfdfaf",
+      "name": "",
+      "price": "",
+      "color": "",
+      "category": "",
+      "description": "",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkMRlFazjcGB1gS7JvrwXWf2Qkh_2MZ2-Hw&usqp=CAU",
       "quantity": 1,
       "userId": 1,
-      "productId": 2,
+      "productId": 4,
       "id": 1
-    },
-    {
-      "name": "mollah",
-      "price": "1000",
-      "color": "whirte",
-      "category": "",
-      "description": "",
-      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/toshiba/satellite-pro-c40-g-109/satellite-pro-c40-g-109-01-228x228.webp",
-      "quantity": 1,
-      "userId": 1,
-      "productId": 5,
-      "id": 2
     }
   ],
   "orders": [
@@ -117,6 +105,30 @@
       "totalPrice": 2100,
       "userId": 1,
       "id": 1
+    },
+    {
+      "email": "develtest088@gmail.com",
+      "address": "non",
+      "contact": "non",
+      "totalPrice": 2100,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "email": "develtest088@gmail.com",
+      "address": "none",
+      "contact": "none",
+      "totalPrice": 2100,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "email": "develtest088@gmail.com",
+      "address": "none",
+      "contact": "none",
+      "totalPrice": 1100,
+      "userId": 1,
+      "id": 4
     }
   ]
 }

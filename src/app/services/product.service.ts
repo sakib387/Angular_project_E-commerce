@@ -91,5 +91,19 @@ export class ProductService {
   orderNow(data:any){
    return this.http.post('http://localhost:3000/orders',data)
   }
+  orderLinst(){
+    let userSore=localStorage.getItem('user');
+    let userData= userSore && JSON.parse(userSore);
+    let id=userData.id
+    return this.http.get<any>(`http://localhost:3000/orders?userId=${id}`)
+     
+  }
+  deleteCart(data:number){
+    this.http.delete('http://localhost:3000/cart/'+data,{observe:'response'}).subscribe((res)=>{
+            if(res){
+               this.CartData.emit([])
+            }
+         })
+  }
   
 }

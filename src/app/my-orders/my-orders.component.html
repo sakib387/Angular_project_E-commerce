@@ -1,0 +1,37 @@
+<div class="my-order">
+    <h1>MY ORDERS</h1>
+    <div class="row" style="margin-bottom: 10px;">
+       <div class="col-sm-2">
+        <span>Order</span>
+       </div>
+       <div class="col-sm-2">
+        <span>Order Id</span>
+       </div>
+       <div class="col-sm-2">
+        <span>Price</span>
+       </div>
+       <div class="col-sm-2">
+        <span>Status</span>
+       </div>
+       <div class="col-sm-2">
+        <span>Action</span>
+       </div>
+    </div>
+    <div class="row" style="margin-bottom: 10px;" *ngFor="let order of orderLinst">
+        <div class="col-sm-2">
+         <span><img src="https://icon-library.com/images/order-icon-png/order-icon-png-26.jpg"></span>
+        </div>
+        <div class="col-sm-2">
+         <span>#{{order.id}}</span>
+        </div>
+        <div class="col-sm-2">
+            <span>{{order.totalPrice}}</span>
+           </div>
+        <div class="col-sm-2">
+         <span>In progress</span>
+        </div>
+        <div class="col-sm-2">
+         <span><button>Cancel order</button> </span>
+        </div>
+     </div>
+</div>

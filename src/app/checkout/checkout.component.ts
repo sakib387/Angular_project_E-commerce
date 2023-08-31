@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../services/product.service';
+import {  Router } from '@angular/router';
+import { cart } from '../data-model';
 
 @Component({
   selector: 'app-checkout',
@@ -8,11 +10,14 @@ import { ProductService } from '../services/product.service';
 })
 export class CheckoutComponent {
   totalPrice:number|undefined 
-  constructor(private product:ProductService){}
+  cartData:cart[]|undefined
+  constructor(private product:ProductService,
+    private route:Router
+    ){}
    
   ngOnInit(){
     this.product.currentCart().subscribe((res)=>{
-   
+     this.cartData=res
       let price=0;
       res.forEach((item)=>{
         price=price+(Number(item.price)*Number(item.quantity))
@@ -29,8 +34,13 @@ export class CheckoutComponent {
       totalPrice:this.totalPrice,
       userId:userId
     }
+    this.cartData?.forEach((item)=>{
+      setTimeout(()=>{
+        item.id && this.product.deleteCart(item.id)
+      },500)
+    })
     this.product.orderNow(orderData).subscribe((res)=>{
-      
+      this.route.navigate(['/my-orders'])
     })
   }
 }
