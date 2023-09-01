@@ -2,7 +2,7 @@
 <nav>
     <h1><a routerLink="/" style="text-decoration: none;">E-commerce</a></h1>
   
-    <div class="nav-search" *ngIf="manuType=='default'">
+    <div class="nav-search" *ngIf="manuType=='default'||manuType=='user'">
 
         <input type="text" #searchInput placeholder="search for product" (keyup)="searchProduct($event)" (blur)="removeSearch()">
          <button (click)="searchAproduct(searchInput.value)">Search</button>
@@ -22,8 +22,10 @@
             <li><a routerLink="/seller-auth">{{userName|titlecase}}</a></li>
             <li><a routerLink="/my-orders">MyOrders</a></li>
             <li><a (click)="userlogout()">logOut</a></li>
-            <li><a routerLink="/cart-page">Cart({{cardItem}})</a></li>
-          </ul>
+            <li>
+              <a [routerLink]="cardItem > 0 ? ['cart-page'] : null">Cart({{ cardItem }})</a>
+            </li>
+                      </ul>
           <ul *ngSwitchCase="'seller'">
             <li><a routerLink="/seller-home">Product List</a></li>
             <li><a routerLink="/seller-add-product">Add product</a></li>

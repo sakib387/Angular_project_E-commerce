@@ -75,6 +75,7 @@ export class HeaderComponent {
      userlogout() {
       localStorage.removeItem('user');
     this.route.navigate(['user-auth']);
+    this.product.CartData.emit([]);
      }
 
 }

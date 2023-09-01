@@ -68,9 +68,10 @@ export class ProductService {
     })
   }
   removecart(productid: number, userId: number) {
-    console.log(productid, userId);
+    console.log('sakib mollah', userId,productid);
     const url = `http://localhost:3000/cart?productId=${productid}&userId=${userId}`;
-    return this.http.get(url).subscribe((res: any) => {   
+    return this.http.get(url).subscribe((res: any) => {  
+      console.log(res) 
       if (res.length > 0) {
         let id = res[0].id;
          this.http.delete('http://localhost:3000/cart/'+id).subscribe((res)=>{
