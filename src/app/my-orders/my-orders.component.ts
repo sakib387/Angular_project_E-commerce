@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, numberAttribute } from '@angular/core';
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -13,5 +13,14 @@ export class MyOrdersComponent {
     this.product.orderLinst().subscribe((res)=>{
     this.orderLinst=res
     })
+ 
+  }
+  cancleOrder(id:number){
+    this.product.deleteOrder(id).subscribe((res)=>{
+      this.product.orderLinst().subscribe((res)=>{
+        this.orderLinst=res
+        })
+    })
+    
   }
 }

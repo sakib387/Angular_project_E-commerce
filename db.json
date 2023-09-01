@@ -83,29 +83,8 @@
       "id": 2
     }
   ],
-  "cart": [
-    {
-      "name": "",
-      "price": "",
-      "color": "",
-      "category": "",
-      "description": "",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpkMRlFazjcGB1gS7JvrwXWf2Qkh_2MZ2-Hw&usqp=CAU",
-      "quantity": 1,
-      "userId": 1,
-      "productId": 4,
-      "id": 1
-    }
-  ],
+  "cart": [],
   "orders": [
-    {
-      "email": "develtest088@gmail.com",
-      "address": "none",
-      "contact": "none",
-      "totalPrice": 2100,
-      "userId": 1,
-      "id": 1
-    },
     {
       "email": "develtest088@gmail.com",
       "address": "non",

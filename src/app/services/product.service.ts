@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { cart, product } from '../data-model';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -104,6 +105,9 @@ export class ProductService {
                this.CartData.emit([])
             }
          })
+  }
+  deleteOrder(id: number): Observable<any> {
+    return this.http.delete('http://localhost:3000/orders/' + id);
   }
   
 }
